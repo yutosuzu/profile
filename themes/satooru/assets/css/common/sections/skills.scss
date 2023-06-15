@@ -1,0 +1,31 @@
+#skills {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+
+    @media (min-width: var(--switch-size)) {
+        padding: 80px;
+    }
+
+    .card {
+        height: 160px;
+        border-radius: 10px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        background-color: var(--background);
+
+        .title {
+            height: 40px;
+            padding: 10px 5px 5px;
+            font-size: 1.8rem;
+            text-align: center; 
+        }
+
+        .summary {
+            height: 120px;
+            padding: 1rem;
+            font-size: 1.4rem;
+            overflow: hidden;
+        }
+    }
+}

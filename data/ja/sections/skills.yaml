@@ -1,0 +1,39 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: illustrator
+  summary: "ベジェ曲線描くのが得意です（適当）最近はロゴと資料作成用"
+
+- name: After Effects
+  summary: "極稀にモーショングラフィックス作ってる。プログラミングの方が楽しい"
+
+- name: HTML/CSS
+  summary: "SCSSがめっちゃ好き"
+
+- name: JavaScript
+  summary: "最近TypeScriptの魅力に気付いた。一番良く使う"
+
+- name: Node.js
+  summary: "フレームワーク行脚中です。React,Next,Electron,..."
+
+- name: Python
+  summary: "好きじゃないけどなんやかんや使う。"
+
+- name: Kotlin
+  summary: "やはりできた方がいいに決まってる。これから頑張る"
+
+- name: ペンギン
+  summary: "幼い頃からすき。アデリーペンギンが一番すきだが、フンボルト属のペン達も結構すき。"
+
+- name: 城・歴史
+  summary: "石垣が一番すき。城巡りしたり古戦場回ったりしてる。何気に城郭検定2級もってます。（1級は無理）"

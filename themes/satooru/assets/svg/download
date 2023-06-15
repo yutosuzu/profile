@@ -1,0 +1,14 @@
+#!/bin/sh
+set -ex
+icons="
+  logo-twitter
+  logo-github
+  add-circle
+"
+dest=ionicons
+url=https://unpkg.com/ionicons@5.5.2/dist/svg/
+mkdir -p "${dest}"
+for icon in $icons; do
+  icon="${icon}.svg"
+  wget -O "${dest}/${icon}" "${url}/${icon}"
+done

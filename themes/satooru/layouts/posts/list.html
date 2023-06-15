@@ -1,0 +1,28 @@
+{{ define "main" }}
+
+{{ $currentPath := replace .RelPermalink ".html" "" }}
+
+<div id="posts-list">
+  <div class="card-container" id="card-container">
+    {{ range site.RegularPages.ByDate.Reverse }}
+    
+      {{ if eq (substr .RelPermalink 0 (len $currentPath)) $currentPath }}
+        <a class="card" href="{{ .RelPermalink }}" title="{{ .Title }}">
+          <div class="header">
+            <img class="img-top" src="{{ partial "misc/get-hero.html" . }}" alt="Card image cap" />
+          </div>
+
+          <div class="body">
+            <p class="card-title">{{ .Title }}</p>
+            <div class="summary">{{ .Summary }}</div>
+          </div>
+
+          <div class="footer">{{ .Date.Format "2006 1/2" }}</div>
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
+
+  {{ partial "misc/drawer.html" }}
+</div>
+{{ end }}

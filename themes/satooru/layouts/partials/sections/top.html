@@ -1,0 +1,31 @@
+<div class="top-container">
+    <div>
+      {{ $image := resources.Get .Site.Params.top.icon }}
+      {{ with $image }}
+      <img class="icon" src="{{ $image.RelPermalink }}" alt="icon">
+      {{ end }}
+      <h3 class="title">{{ .Title }}</h3>
+
+      <div class="external-link">
+        {{ if .Site.Params.gitHub }}
+        <a href="https://github.com/{{ .Site.Params.github.id }}" title="github">
+          {{ partial "icons/ionicons" (dict "logoname" "logo-github" "class" "svgicon") }}
+          <span>{{ .Site.Params.github.id }}</span>
+        </a>
+        {{ end }}
+
+        {{ if .Site.Params.twitter }}
+        <a href="https://github.com/{{ .Site.Params.twitter.id }}" title="twitter">
+          {{ partial "icons/ionicons" (dict "logoname" "logo-twitter" "class" "svgicon") }}
+          <span>{{ .Site.Params.twitter.id }}</span>
+        </a>
+        {{ end }}
+      </div>
+
+      {{ if .Content }}
+      <div class="content">
+        {{- .Content -}}
+      </div>
+      {{ end }}
+    </div>
+  </div>

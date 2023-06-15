@@ -1,0 +1,17 @@
+#drawer-2 {
+  width: 240px;
+  height: 100vh;
+  padding: 52px 0 0;
+  background-color: var(--background);
+  overflow-y: scroll;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  position: fixed;
+  top: 0;
+  left: -240px;
+  z-index: 100;
+  transition: all 0.5s ease;
+
+  &.open {
+    left: 0;
+  }
+}

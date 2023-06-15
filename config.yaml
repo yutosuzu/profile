@@ -1,0 +1,44 @@
+baseURL: "https://satooru.me/"
+title: "鈴木 悠斗"
+author: "SatooRu"
+copyright: " © 2022 Copyright."
+paginate: 3
+languageCode: "ja"
+DefaultContentLanguage: "ja"
+uglyURLs: false
+theme: "SatooRu-hugo-theme"
+
+markup:
+  tableOfContents:
+    startLevel: 2
+    endLevel: 6
+    ordered: false
+
+  highlight:
+    codeFences: true
+    noClasses: true
+    guessSyntax: true
+    tabWidth: 4
+    style: base16-snazzy
+
+  goldmark:
+    renderer:
+      unsafe: true
+
+params:
+  share_img: "images/share_image.png"
+  twitterCardDomain: "yuuto.me"
+  github:
+    id: "Yuuto65536"
+
+  twitter:
+    id: "Yuuto_65536"
+
+  header:
+    title: "Yuuoto's Profile"
+    themeToggle: true
+
+  top:
+    icon: "images/icon.png"
+    author: "Yuuto"
+    text: "Hi, There🐣"

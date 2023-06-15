@@ -1,0 +1,48 @@
+#soft-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+  .progress {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+
+    & > .circle {
+      display: inline-block;
+      position: relative;
+      text-align: center;
+      color: #93a2ac;
+      font-weight: 100;
+
+      &:after {
+        content: attr(data-name);
+        width: 100%;
+        color: var(--text);
+        font-size: 1.2rem;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    svg {
+      width: 120px;
+      height: 120px;
+
+      &:nth-child(2) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: rotate(90deg);
+      }
+
+      path {
+        fill: none;
+        stroke-width: 20;
+        stroke-dasharray: 628;
+      }
+    }
+  }
+}

@@ -1,0 +1,32 @@
+#about {
+  background-color: var(--background-dark);
+  display: flex;
+  flex-wrap: wrap;
+  
+  @media (min-width: var(--switch-size)) {
+    padding: 50px;
+  }
+
+  .box {
+    width: 100%;
+    padding: 30px;
+
+    @media (min-width: var(--switch-size)) {
+      width: 100%;
+      flex: 0 0 50%;
+    }
+
+    .profession {
+      line-height: 5rem;
+    }
+
+    .profession > a {
+      color: var(--blue);
+    }
+
+    .summary {
+      max-width: 500px;
+      margin-bottom: 10px;
+    }
+  }
+}

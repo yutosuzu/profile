@@ -1,0 +1,23 @@
+<div id="drawer-2">
+  <div id="sidebar">
+    <a href="/posts">posts</a>
+    {{ partial "misc/sidebar.html" (dict "menuItems" site.Menus.sidebar "ctx" .) }}
+  </div>
+</div>
+
+<script>
+  function openList(icon) {
+    const li = icon.parentElement;
+    const line = icon.getElementsByTagName("span");
+
+    if (li.dataset.isopen == "true") {
+      line[0].style.transform = "rotate(90deg) translate(-1px, 5px)";
+      li.style.height = "";
+      li.dataset.isopen = "false";
+    } else {
+      line[0].style.transform = "translate(-50%, -50%)";
+      li.style.height = "auto";
+      li.dataset.isopen = "true";
+    }
+  }
+</script>

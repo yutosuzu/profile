@@ -1,0 +1,17 @@
+<h1 class="title">{{ .section.name }}</h1>
+<div id="{{ .section.id }}">
+  {{ range first 3 site.RegularPages.ByDate.Reverse }}
+  <a class="card" href="{{ .RelPermalink }}" title="{{ .Title }}">
+    <div class="header">
+      <img class="img-top" src="{{ partial "misc/get-hero.html" . }}" alt="Card image cap" />
+    </div>
+
+    <div class="body">
+      <p class="card-title">{{ .Title }}</p>
+      <p class="summary">{{ .Summary }}</p>
+    </div>
+
+    <div class="footer">{{ .Date.Format "2006 1/2" }}</div>
+  </a>
+  {{ end }}
+</div>

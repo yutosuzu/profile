@@ -1,0 +1,154 @@
+#post-section {
+  transition: all 0.5s ease;
+
+  &.active {
+    @media (min-width: 800px) {
+      padding-left: 240px;
+    }
+  }
+
+  .content-container {
+    @media (min-width: 1000px) {
+      padding-right: 240px;
+    }
+
+    .page {
+      width: calc(100% - 20px);
+      max-width: 1000px;
+      margin-inline: auto;
+      background-color: var(--background);
+
+      .hero-area {
+        margin-top: 3rem;
+        width: 100%;
+        height: 400px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .datetime {
+        color: var(--secoundary);
+        text-align: center;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .content {
+        padding: 20px;
+
+        #post-content > * {
+          margin-bottom: 20px;
+        }
+
+        p,
+        li {
+          font-size: 1.7rem;
+          line-height: 2.2rem;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-weight: 500;
+        }
+
+        ul,
+        ol {
+          margin-bottom: 15px;
+          padding-left: 40px;
+
+          & ul,
+          ol {
+            padding-left: 19px;
+          }
+        }
+
+        img {
+          max-width: 100%;
+          max-height: 100vh;
+          display: inline-block;
+        }
+
+        .highlight {
+          padding: 10px 0;
+
+          code {
+            display: inline-block;
+            width: 100%;
+          }
+
+          pre {
+            width: 100%;
+            padding: 10px;
+          }
+
+          span {
+            width: 100%;
+            white-space: pre;
+          }
+        }
+
+        blockquote {
+          padding: 1rem;
+          background-color: var(--background-dark);
+          border-left: 4px solid var(--blue);
+        }
+
+        pre {
+          background-color: var(--background-dark);
+
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    .toc {
+      width: 240px;
+      padding: 100px 20px 0 0;
+      background-color: var(--background);
+      box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+      display: none;
+      overflow-y: scroll;
+      position: fixed;
+      right: 0;
+      top: 0;
+      bottom: 0;
+
+      @media (min-width: 1000px) {
+        display: block;
+      }
+
+      ul {
+        padding-bottom: 5px;
+        padding-left: 15px;
+
+        li {
+          line-height: 2.5rem;
+          list-style: none;
+
+          a {
+            display: inline-block;
+            padding: 5px;
+            border-radius: 5px;
+            transition: all 0.5s ease;
+            transform: translate(0, 0);
+
+            &:hover {
+              color: var(--text-light);
+              background-color: var(--blue);
+              transform: translate(10px, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}

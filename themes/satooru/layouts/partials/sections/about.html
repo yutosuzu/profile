@@ -1,0 +1,16 @@
+<div id="{{ .section.id }}">
+  <div class="box">
+    <h4>{{ .name }}</h4>
+    <p class="profession">{{ .designation }} <a href="{{ .company.url }}">{{ .company.name }}</a></p>
+    {{ range .summary }}
+    <p class="summary">
+      {{ . }}
+      {{ end }}
+    </p>
+  </div>
+
+  <div class="box">
+    {{ partial "misc/soft-skills.html" . }}
+  </div>
+</div>
+</div>

@@ -1,0 +1,18 @@
+{{ range .menuItems }}
+  {{ if .HasChildren }}
+    <li>
+      <span class="circle"  onclick="openList(this)" data-isopen="false">
+        <span></span>
+        <span></span>
+      </span>
+      <a class="has-subtree" href="{{ .URL }}">{{.Name}}</a>
+      <ul>
+        {{ partial "misc/sidebar.html" (dict "menuName" $.menuName "menuItems" .Children "ctx" $.ctx) }}
+      </ul>
+    </li>
+  {{ else }}
+    <li>
+      <a href="{{ .URL }}" title="{{ .Name }}">{{.Name}}</a>
+    </li>
+  {{ end }}
+{{ end }}

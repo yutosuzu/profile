@@ -1,0 +1,27 @@
+{{ define "main" }}
+<main aria-role="main" id="home-page">
+  {{- partial "sections/top.html" . -}}
+  
+  {{ $sections:= site.Data.sections }}
+  {{ if (index site.Data site.Language.Lang).sections }}
+    {{ $sections = (index site.Data site.Language.Lang).sections }}
+  {{ end }}
+  
+  {{ if $sections }}
+    {{ $bg := "dark" }}
+    {{ range sort $sections "section.weight" }}
+      {{ if .section.enable }}
+        <div class="section-{{ $bg }}">
+          {{- partial (printf "sections/%s.html" (replace (lower .section.id) " " "-")) . -}}
+        </div>
+
+        {{ if eq $bg "dark" }}
+          {{ $bg = "light" }}
+        {{ else }}
+          {{ $bg = "dark" }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</main>
+{{ end }}

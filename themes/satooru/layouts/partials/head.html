@@ -1,0 +1,23 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+{{ $sass := resources.Get "css/style.scss" }}
+{{ $style := $sass | resources.ToCSS | minify | resources.Fingerprint "sha256" }}
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+<title>{{ if not .IsHome }}{{ .Title }} |{{ end }} {{ .Site.Title }}</title>
+
+
+{{- with .Title | default .Site.Title }}
+  <meta name="twitter:title" content="{{ . | truncate 70 }}" />
+{{- end }}
+{{- with .Description | default .Params.subtitle | default .Summary }}
+  <meta name="twitter:description" content="{{ . | truncate 200 }}">
+{{- end }}
+{{- with .Site.Params.share_img }}
+  <meta name="twitter:image" content="{{ resources.Get . }}" />
+{{- end }}
+  <meta name="twitter:card" content="summary" />
+{{- with .Site.Author.twitter }}
+  <meta name="twitter:site" content="@{{ . }}" />
+  <meta name="twitter:creator" content="@{{ . }}" />
+{{- end }}

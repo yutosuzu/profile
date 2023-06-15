@@ -1,0 +1,23 @@
+section:
+  name: Active Projects
+  id: projects
+  enable: true
+  weight: 5
+  showOnNavbar: true
+
+projects:
+  - name: センシング
+    timeline: "2023.4 -"
+    repo: https://github.com/SatooRu65536/kajilab
+    summary: 梶研究室での活動
+    tags:
+      - "python"
+      - "sensing"
+
+  - name: シフト集計アプリ
+    timeline: "2023.4 -"
+    summary: LINEBOTから希望シフトを提出したい
+    tags:
+      - javascript
+      - nextjs
+      - linebot

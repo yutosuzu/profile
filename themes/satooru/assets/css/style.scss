@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600;700;800;900&display=swap');
+
+@import "./syntax.scss";
+@import "./main.scss";
+
+@import "common/home.scss";
+@import "common/header.scss";
+@import "common/header-2.scss";
+@import "common/footer.scss";
+@import "common/markup.scss";
+
+@import "common/sections/top.scss";
+@import "common/sections/about.scss";
+@import "common/sections/skills.scss";
+@import "common/sections/experiences.scss";
+@import "common/sections/project.scss";
+@import "common/sections/recent-posts.scss";
+@import "common/page/posts.scss";
+@import "common/page/single.scss";
+
+@import "common/misc/soft-skills.scss";
+@import "common/misc/sidebar.scss";
+@import "common/misc/drawer-2.scss";
+@import "common/misc/shortcodes/youtube.scss";

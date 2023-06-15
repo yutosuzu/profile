@@ -1,0 +1,6 @@
+[submodule "theme/satooru-hugo-themes"]
+	path = theme/satooru-hugo-themes
+	url = https://github.com/SatooRu65536/satooru-hugo-theme
+[submodule "themes/satooru-hugo-theme"]
+	path = themes/satooru-hugo-theme
+	url = https://github.com/SatooRu65536/satooru-hugo-theme

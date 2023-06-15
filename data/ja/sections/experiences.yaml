@@ -1,0 +1,68 @@
+section:
+  name: Experiences
+  id: experiences
+  enable: true
+  weight: 3
+  showOnNavbar: true
+
+
+experiences:
+  - company:
+      name: 梶研究室
+      url: https://kajilab.net/
+      location: "4号館別館 108"
+      overview: 梶研究室に参加
+      designation: 梶研究室に参加した
+      start: "2023.04"
+
+  - company:
+      name: SET
+      url: https://set1.ie.aitech.ac.jp/
+      location: "4号館別館 310"
+      overview: システム工学研究会に入部した
+      designation: システム工学研究会 入部
+      start: "2023.04"
+
+  - company:
+      name: AIT
+      url: https://www.ait.ac.jp/
+      location: Toyota Aichi
+      overview: 愛知工業大学 (情報科学科コンピューターシステム専攻) に入学
+      designation: 愛知工業大学 入学
+      start: "2023.04"
+      fill: true
+
+  - company:
+      url: https://misc-mdn.dev
+      location: 415教室
+      name: MISC
+      overview: 情報システム(元システムコンピューター)部に転部しました。なんか部長なってた
+      designation: 情報システム部 入部
+      start: "2021.11"
+      end: "2023.3"
+
+  - company:
+      name: メカ部
+      url: https://www.meiden.ed.jp/club/detail.html?id=380
+      overview: メカニカルアーツ部に参加しました。(実質掛け持ち)
+      designation: メカニカルアーツ部 参加
+      start: "2020.10"
+      end: "2023.3"
+
+  - company:
+      name: AMIDC
+      url: https://meidenid.com
+      overview: 情報デザイン部に入部した。
+      designation: 情報デザイン部 入部
+      start: "2020.07"
+      end: "2022.10"
+
+  - company:
+      designation: 名電高校入学
+      name: Meiden H.S.
+      url: "https://www.meiden.ed.jp"
+      start: "2020.04"
+      end: "2023.03"
+      location: Nagoya
+      overview: 情報科学科に入学した。
+      fill: true

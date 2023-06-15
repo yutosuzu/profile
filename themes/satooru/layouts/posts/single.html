@@ -1,0 +1,32 @@
+{{ define "main" }}
+<div id="post-section">
+  <div class="content-container">
+    <div class="page">
+      <div class="hero-area" style='background-image: url({{ partial "misc/get-hero.html" . }});'></div>
+
+      <div class="content">
+        <h1 class="title">{{ .Page.Title }}</h1>
+        <p class="datetime">{{ .Page.Date | time.Format "2006年1月2日" }}</p>
+
+        <div>
+          <ul style="padding-left: 0;">
+            {{ range .Params.tags }}
+            {{ $url:= printf "tags/%s/" . }}
+            <li><a href="{{ $url | urlize | relLangURL }}">{{ . }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div id="post-content">
+          {{ .Page.Content }}
+        </div>
+      </div>
+    </div>
+
+    <div class="toc">
+      {{ .TableOfContents }}
+    </div>
+
+    {{ partial "misc/drawer.html" }}
+  </div>
+{{ end }}

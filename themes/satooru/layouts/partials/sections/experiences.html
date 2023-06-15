@@ -1,0 +1,33 @@
+<h1 class="title">{{ .section.name }}</h1>
+<div id="{{ .section.id }}">
+  <div class="outline">
+    <div class="container">
+      {{ range $index, $experience := sort .experiences "company.start" "desc" }}
+      {{ $company := $experience.company }}
+      <div class="card">
+        <div class="number_container">
+          <div class="number {{ if $company.fill }}{{ " fill" }}{{ end }}"></div>
+          <div class="line"></div>
+        </div>
+
+        <div class="container">
+          <div class="content">
+            <p class="designation">{{ $company.designation }}</p>
+            <a class="name" href="{{ $company.url }}">{{ $company.name }}</a>
+            <p class="position">
+              {{- $company.start -}}
+              {{- " - " -}}
+              {{- if $company.end -}}{{- $company.end -}}{{- end -}}
+              {{ if $company.location }}
+              {{ ", " }}
+              {{- $company.location -}}
+              {{ end }}
+            </p>
+            <p class="overview">{{ $company.overview }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</div>

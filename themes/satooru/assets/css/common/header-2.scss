@@ -1,0 +1,54 @@
+#header-2 {
+  height: 52px;
+  padding: 10px;
+  background-color: var(--background);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10000;
+  transition: all 0.5s ease;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+  nav {
+    display: flex;
+
+    .title {
+      padding-left: 10px;
+      font-size: 2rem;
+      line-height: 32px;
+      text-decoration: none;
+    }
+
+    #hamburger-2 {
+      width: 30px;
+      height: 30px;
+      margin-top: 2px;
+      position: absolute;
+      right: 20px;
+      cursor: pointer;
+
+      &.active {
+        div:nth-child(1) {
+          transform: rotate(-45deg) translate(-6px, 5px);
+        }
+        div:nth-child(2) {
+          opacity: 0;
+        }
+        div:nth-child(3) {
+          transform: rotate(45deg) translate(-6px, -5px);
+        }
+      }
+
+      div {
+        width: 100%;
+        height: 3px;
+        margin-block: 5px;
+        background-color: var(--text);
+        display: block;
+        transition: all 0.5s ease;
+      }
+    }
+  }
+}
